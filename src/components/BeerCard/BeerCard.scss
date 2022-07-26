@@ -4,8 +4,9 @@
 
 .beer {
     background: green;
-    //width: 12.5rem;
+    width: 12.5rem;
     //height: 12.5rem;
+    padding: 2.5rem;
     margin: 2.5rem;
     display: flex;
     flex-direction: column;
@@ -14,4 +15,9 @@
     border: black 2px solid;
     border-radius: 7.5%;
     box-shadow: 0.5rem 0.5rem 0.5rem;
+}
+
+img {
+    height: 20rem;
+    width: 10rem;
 }

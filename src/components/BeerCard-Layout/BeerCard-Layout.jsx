@@ -10,7 +10,7 @@ const BeerCardLayout =({beersData}) => {
   return (  
     <section>
       <p className="beerCards"> {beerCard}</p>
-    </section>
+    </section> 
   )
 }
 
