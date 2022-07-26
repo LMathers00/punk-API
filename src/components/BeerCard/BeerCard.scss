@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+}
+
+.beer {
+    background: green;
+    //width: 12.5rem;
+    //height: 12.5rem;
+    margin: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: black 2px solid;
+    border-radius: 7.5%;
+    box-shadow: 0.5rem 0.5rem 0.5rem;
+}

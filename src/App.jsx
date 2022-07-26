@@ -8,8 +8,13 @@ const App = () => {
 
   return (
     <div className="beerCard__application">
-      <h1 className="beerCard__heading">Punk API</h1>      
+      <main className="beerCard-container">
+      <h1 className="beerCard__heading">Punk API</h1>
+      <section className="beerCard-container__beer-container">
       <BeerCardLayout beersData={beers}/>
+        </section> 
+        </main>     
+  
     </div>
   );
 };
