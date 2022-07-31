@@ -1,22 +1,26 @@
-import "./App.scss";
-import beers from "./Data/BeerData";
-import BeerCardLayout from "./components/BeerCard-Layout/BeerCard-Layout";
-
+import { getBeers } from './Data/BeerData-API';
+import CardList from './components/CardList/CardList';
+import React, { useState, useEffect } from 'react';
+import styles from './App.scss';
 
 const App = () => {
 
+  const [beers, setBeers] = useState([]);
+
+  useEffect(async () => {
+    const beers = await getBeers();
+    setBeers(beers);
+  }, []);
+
+  const [listOrder] = useState('');
+
+
 
   return (
-    <div className="beerCard__application">
-      <main className="beerCard-container">
-      <h1 className="beerCard__heading">Punk API</h1>
-      <section className="beerCard-container__beer-container">
-      <BeerCardLayout beersData={beers}/>
-        </section> 
-        </main>     
-  
+    <div className={`app ${styles.app}`}>
+      <CardList beers={beers} listOrder={listOrder} />
     </div>
-  );
-};
+  )
+}
 
 export default App;
