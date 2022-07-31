@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import styles from './Card.module.scss';
+import styles from './Card.scss';
 import Front from './Front';
 import Back from './Back';
 

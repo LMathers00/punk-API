@@ -1,4 +1,4 @@
-import styles from './Back.module.scss'
+import styles from './Back.scss'
 
 const Back = (props) => {
 
