@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Card.scss';
-import Front from './Front';
-import Back from './Back';
+import Front from '../Card/Front/Front';
+import Back from '../Card/Back/Back';
 
 const Card = (props) => {
 
