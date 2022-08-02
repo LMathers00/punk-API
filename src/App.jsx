@@ -1,9 +1,9 @@
 import { getBeers, searchBeers, findStrong } from './Data/BeerData-API';
 import CardList from './components/CardList';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar';
 import { useState, useEffect } from 'react';
 import styles from './App.scss';
-import './styles.scss';
+
 
 const App = () => {
 
@@ -33,7 +33,7 @@ const App = () => {
   }
 
   return (
-    <div className={`app ${styles.app}`}>
+<div className={`app ${styles.app}`}>
       <NavBar updateSearchText={fetchSearch} updateAbv={fetchAbv} updateOrder={order} />
       <CardList beers={beers} listOrder={listOrder} />
     </div>

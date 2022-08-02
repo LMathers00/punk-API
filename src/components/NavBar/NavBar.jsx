@@ -1,7 +1,7 @@
 import './NavBar.scss'
-import Order from '../Order';
-import SearchBar from '../SearchBar';
-import styles from './NavBar.module.scss';
+import Order from '../Order/Order';
+import SearchBar from '../SearchBar/SearchBar';
+import styles from './NavBar.scss';
 
 const NavBar = (props) => {
 
