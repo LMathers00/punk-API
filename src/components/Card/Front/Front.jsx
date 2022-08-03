@@ -1,4 +1,4 @@
-import styles from './Front.scss'
+import styles from './Front.module.scss'
 
 const Front = (props) => {
 

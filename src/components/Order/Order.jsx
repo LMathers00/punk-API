@@ -1,4 +1,4 @@
-import './Order.scss'
+import styles from './Order.scss'
 const Order = (props) => {
     
     const { updateOrder } = props; 

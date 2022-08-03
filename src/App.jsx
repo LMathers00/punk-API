@@ -1,7 +1,9 @@
-import { getBeers } from './Data/BeerData-API';
-import CardList from './components/CardList/CardList';
-import React, { useState, useEffect } from 'react';
+import { getBeers, searchBeers, findStrong } from './Data/BeerData-API';
+import CardList from './components/CardList';
+import NavBar from './components/NavBar/NavBar';
+import { useState, useEffect } from 'react';
 import styles from './App.scss';
+
 
 const App = () => {
 
@@ -12,12 +14,27 @@ const App = () => {
     setBeers(beers);
   }, []);
 
-  const [listOrder] = useState('');
+  const fetchSearch = async (searchText) => {
+    const beers = await searchBeers(searchText);
+    setBeers(beers);
+  };
 
+  const fetchAbv = async () => {
+    const beers = await findStrong();
+    setBeers(beers);
+  }
 
+  const [listOrder, setOrder] = useState('');
+
+  const order = (selectedChoice) => {
+    if (setBeers !== []) {
+      return setOrder(selectedChoice)
+    }
+  }
 
   return (
-    <div className={`app ${styles.app}`}>
+<div className={`app ${styles.app}`}>
+      <NavBar updateSearchText={fetchSearch} updateAbv={fetchAbv} updateOrder={order} />
       <CardList beers={beers} listOrder={listOrder} />
     </div>
   )

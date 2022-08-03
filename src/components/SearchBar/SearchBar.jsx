@@ -1,4 +1,4 @@
-import './SearchBar.scss'
+import styles from './SearchBar.scss'
 
 const SearchBar = (props) => {
     const { updateSearchText, updateAbv } = props; 
